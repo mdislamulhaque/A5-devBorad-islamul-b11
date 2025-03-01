@@ -18,7 +18,7 @@
         <div class="flex gap-4 items-center">
           <div class="bg-slate-200 flex p-2 rounded-md gap-2">
             <img class="" src="./assets/checkbox.png" alt="" />
-            <p class="text-xl font-bold">23</p>
+            <p id="task-complete-count" class="text-xl font-bold">23</p>
           </div>
           <div>
             <img
@@ -34,7 +34,9 @@
     <main>
       <div class="flex flex-col md:flex-row gap-4">
         <div class="bg-white w-full md:w-8/12 rounded-lg">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 border-b-2 border-gray-200 border-dashed"
+          >
             <!-- Card 1 -->
             <div class="p-6 bg-slate-200 flex gap-2 rounded-md">
               <img
@@ -44,12 +46,12 @@
               />
               <div>
                 <p class="text-sm text-gray-500">Task Assigned</p>
-                <p class="text-xl font-bold">06</p>
+                <p id="task-count" class="text-xl font-bold">06</p>
               </div>
             </div>
             <!-- Card 2 -->
             <div
-              class="col-span-1 sm:col-span-2 bg-blue-600 flex items-center justify-center rounded-md"
+              class="col-span-1 sm:col-span-2 bg-gradient-to-r from-blue-600 to-blue-300 flex items-center justify-center rounded-md"
             >
               <div
                 id="discover"
@@ -69,8 +71,7 @@
                 alt=""
               />
               <div>
-                <p class="text-sm text-gray-500">Task Assigned</p>
-                <p class="text-xl font-bold">06</p>
+                <p id="day-date" class="text-xl"></p>
               </div>
             </div>
           </div>
@@ -78,16 +79,19 @@
           <!-- Card Container -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
             <!-- Cards-1 -->
-            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md">
+            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md card">
               <span
                 class="bg-white text-gray-700 text-xs font-semibold px-3 py-1 rounded-md"
                 >ShopEase</span
               >
-              <h2 class="mt-2 text-lg font-semibold text-gray-900">
+              <h2 class="mt-2 text-lg font-semibold text-gray-900 card-title">
                 Fix Mobile Button Issue
               </h2>
-              <p class="mt-1 text-gray-600 text-sm bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlapping...
+              <p
+                class="mt-1 line-clamp-2 text-gray-600 text-sm bg-white py-1 px-2 rounded-md"
+              >
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
               </p>
               <div class="flex items-center justify-between">
                 <div class="mt-4 text-sm text-gray-500 font-medium">
@@ -96,7 +100,7 @@
                 </div>
                 <div class="mt-3">
                   <button
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
+                    class="bg-blue-600 btn text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
                   >
                     Completed
                   </button>
@@ -104,25 +108,28 @@
               </div>
             </div>
             <!-- Cards-2 -->
-            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md">
+            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md card">
               <span
                 class="bg-white text-gray-700 text-xs font-semibold px-3 py-1 rounded-md"
-                >ShopEase</span
+                >CloudSync</span
               >
-              <h2 class="mt-2 text-lg font-semibold text-gray-900">
-                Fix Mobile Button Issue
+              <h2 class="mt-2 text-lg font-semibold text-gray-900 card-title">
+                Add Dark Mode
               </h2>
-              <p class="mt-1 text-gray-600 text-sm bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlapping...
+              <p
+                class="mt-1 line-clamp-2 text-gray-600 text-sm bg-white py-1 px-2 rounded-md"
+              >
+                Store the user's preference in localStorage, update CSS
+                variables dynamically, and apply a smooth transition effect.
               </p>
               <div class="flex items-center justify-between">
                 <div class="mt-4 text-sm text-gray-500 font-medium">
                   <p>Deadline</p>
-                  <p class="text-gray-900 font-semibold">21 March 2025</p>
+                  <p class="text-gray-900 font-semibold">22 March 2025</p>
                 </div>
                 <div class="mt-3">
                   <button
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
+                    class="bg-blue-600 btn text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
                   >
                     Completed
                   </button>
@@ -130,25 +137,28 @@
               </div>
             </div>
             <!-- Cards-3-->
-            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md">
+            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md card">
               <span
                 class="bg-white text-gray-700 text-xs font-semibold px-3 py-1 rounded-md"
-                >ShopEase</span
+                >SwiftPay</span
               >
-              <h2 class="mt-2 text-lg font-semibold text-gray-900">
-                Fix Mobile Button Issue
+              <h2 class="mt-2 text-lg font-semibold text-gray-900 card-title">
+                Optimize Home page 
               </h2>
-              <p class="mt-1 text-gray-600 text-sm bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlapping...
+              <p
+                class="mt-1 line-clamp-2 text-gray-600 text-sm bg-white py-1 px-2 rounded-md"
+              >
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
               </p>
               <div class="flex items-center justify-between">
                 <div class="mt-4 text-sm text-gray-500 font-medium">
                   <p>Deadline</p>
-                  <p class="text-gray-900 font-semibold">21 March 2025</p>
+                  <p class="text-gray-900 font-semibold">23 March 2025</p>
                 </div>
                 <div class="mt-3">
                   <button
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
+                    class="bg-blue-600 btn text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
                   >
                     Completed
                   </button>
@@ -156,25 +166,28 @@
               </div>
             </div>
             <!-- Cards-4 -->
-            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md">
+            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md card">
               <span
                 class="bg-white text-gray-700 text-xs font-semibold px-3 py-1 rounded-md"
-                >ShopEase</span
+                >Meta</span
               >
-              <h2 class="mt-2 text-lg font-semibold text-gray-900">
-                Fix Mobile Button Issue
+              <h2 class="mt-2 text-lg font-semibold text-gray-900 card-title">
+                Add new emoji 🤲
               </h2>
-              <p class="mt-1 text-gray-600 text-sm bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlapping...
+              <p
+                class="mt-1 line-clamp-2 text-gray-600 text-sm bg-white py-1 px-2 rounded-md"
+              >
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
               </p>
               <div class="flex items-center justify-between">
                 <div class="mt-4 text-sm text-gray-500 font-medium">
                   <p>Deadline</p>
-                  <p class="text-gray-900 font-semibold">21 March 2025</p>
+                  <p class="text-gray-900 font-semibold">24 March 2025</p>
                 </div>
                 <div class="mt-3">
                   <button
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
+                    class="bg-blue-600 btn text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
                   >
                     Completed
                   </button>
@@ -182,25 +195,28 @@
               </div>
             </div>
             <!-- Cards-5 -->
-            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md">
+            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md card">
               <span
                 class="bg-white text-gray-700 text-xs font-semibold px-3 py-1 rounded-md"
-                >ShopEase</span
+                >Google LLC</span
               >
-              <h2 class="mt-2 text-lg font-semibold text-gray-900">
-                Fix Mobile Button Issue
+              <h2 class="mt-2 text-lg font-semibold text-gray-900 card-title">
+                Integrate OpenAI API
               </h2>
-              <p class="mt-1 text-gray-600 text-sm bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlapping...
+              <p
+                class="mt-1 line-clamp-2 text-gray-600 text-sm bg-white py-1 px-2 rounded-md"
+              >
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
               </p>
               <div class="flex items-center justify-between">
                 <div class="mt-4 text-sm text-gray-500 font-medium">
                   <p>Deadline</p>
-                  <p class="text-gray-900 font-semibold">21 March 2025</p>
+                  <p class="text-gray-900 font-semibold">25 March 2025</p>
                 </div>
                 <div class="mt-3">
                   <button
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
+                    class="bg-blue-600 btn text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
                   >
                     Completed
                   </button>
@@ -208,25 +224,29 @@
               </div>
             </div>
             <!-- Cards-6 -->
-            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md">
+            <div class="max-w-sm bg-gray-100 p-4 rounded-2xl shadow-md card">
               <span
                 class="bg-white text-gray-700 text-xs font-semibold px-3 py-1 rounded-md"
-                >ShopEase</span
+                >Glassdoar</span
               >
-              <h2 class="mt-2 text-lg font-semibold text-gray-900">
-                Fix Mobile Button Issue
+              <h2 class="mt-2 text-lg font-semibold text-gray-900 card-title">
+                Improve Job searching
               </h2>
-              <p class="mt-1 text-gray-600 text-sm bg-white p-2 rounded-md">
-                Debug using Chrome DevTools, check for overlapping...
+              <p
+                class="mt-1 line-clamp-2 text-gray-600 text-sm bg-white py-1 px-2 rounded-md"
+              >
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly and ensure onClick works properly
               </p>
               <div class="flex items-center justify-between">
                 <div class="mt-4 text-sm text-gray-500 font-medium">
                   <p>Deadline</p>
-                  <p class="text-gray-900 font-semibold">21 March 2025</p>
+                  <p class="text-gray-900 font-semibold">26 March 2025</p>
                 </div>
                 <div class="mt-3">
                   <button
-                    class="bg-blue-600 text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
+                    id="card-last"
+                    class="bg-blue-600 btn text-white text-sm font-medium px-4 py-1.5 rounded-md cursor-pointer"
                   >
                     Completed
                   </button>
@@ -245,11 +265,14 @@
               <img class="inline me-4" src="./assets/activity.png" alt="" />
               <span class="">Activity Log</span>
             </div>
-            <button class="block bg-blue-700 py-2 px-6 text-white rounded-md">
+            <button
+              id="clear-history"
+              class="block bg-blue-700 py-2 px-6 text-white rounded-md cursor-pointer"
+            >
               Clear History
             </button>
           </div>
-          <div>history show</div>
+          <div id="taskContainer" class="px-2"></div>
         </div>
       </div>
     </main>
